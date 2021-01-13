@@ -15,7 +15,7 @@ node {
         }
     }
     stage('docker build/push') {
-        docker.withServer('tcp://103.56.156.20:4243') {
+        docker.withServer('tcp://103.56.156.20:2375') {
             docker.withRegistry('https://index.docker.io', 'dockerhub') {
                 def app = docker.build("boploi/jenkinsfile_docker_nodesjs_demo:${commit-id}", '.').push()
             }   
