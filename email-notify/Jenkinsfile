@@ -12,7 +12,7 @@ node {
         }
         stage('test') {
             println('My test has failed!')
-            sh 'exit1'
+            sh 'exit 1'
         }
     }
     catch(e) {
