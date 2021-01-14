@@ -7,7 +7,7 @@ node {
     // trim() remove spaces in front and after of word
    }
    stage('test') {
-     nodejs(nodeJSInstallationName: 'nodejs') {
+     nodejs(nodeJSInstallationName: 'nodejs-latest') {
        sh 'npm install --only=dev'
         // install only development package in package.json
        sh 'npm test'
